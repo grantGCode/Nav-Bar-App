@@ -1,0 +1,109 @@
+
+
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* General styling */
+nav {
+    background-color: #6969B3;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+nav a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #EDF5FC;
+}
+
+/* Defualt styling for small screen (mobile-first)*/
+.menu-items {
+    display: none; /* Menu items by default not visible */
+    background-color: #272D2D;
+}
+.menu-items a {
+    display: block;
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    margin-left: 1rem;
+}
+.social-icons {
+    display: none;
+}
+#small-screen-elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+#nav-bruger-toggle {
+    font-size: 1.8rem;
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    padding-right: 2rem;
+}
+#logo {
+    font-size:2.4rem;
+    color: black;
+    padding-left: 2rem;
+}
+/* Is toggled with JS to make menu items visible */
+ .show-menu-items {
+  display: block;
+ height: 250px;
+}
+
+@media screen and (min-width: 700px) {
+    #nav-bruger-toggle {
+        display: none;
+    }
+    #nav-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* spread contents of container horizontly*/
+        align-items: center;
+    }
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+        padding-right: 0.5rem;
+    }
+    .social-icons a {
+        margin-right: 1rem;
+        font-size: 1.3rem;
+    }
+    .menu-items {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+    }
+    .menu-items li a {
+        padding-top: 0rem;
+        font-size: 1.3rem;
+        margin-right: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .menu-items li a {
+        font-size: 1.4rem;
+        margin-right: 2rem;
+    }
+    .social-icons a {
+        margin-right: 1.8rem;
+        font-size: 1.5rem;
+    }
+    #logo {
+        font-size: 2.8rem;
+    }
+ }
